@@ -7,19 +7,19 @@ jobs:
       - name: Get Code
         uses: actions/checkout@v3
       - name: Install Dependencies
-        runs: npm ci
+        run: npm ci
       - name: Linting
-        runs: npm run lint
+        run: npm run lint
       - name: Testing
-        runs: npm test
+        run: npm test
   deploy:
     runs-on: ubuntu-latest
     steps:
       - name: Get Code
         uses: actions/checkout@v3
       - name: Install Dependencies
-        runs: npm ci
+        run: npm ci
       - name: Build
-        runs: npm run build
+        run: npm run build
       - name: Deployment
-        runs: echo "Deployment Step"
+        run: echo "Deployment Step"
